@@ -1,34 +1,64 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
+body {
+    background-color: #F9FAFF;
+}
+.title {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: "Playfair", serif;
+}
+.title::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-color: #73cef8;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
 /* start nav */
-nav{
-    background-color: white;
+.nav-bar{
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
 }
-.nav-link{
+.navbar{
+    padding: 0 !important;
+    /* margin-top: 2rem; */
+    background-color: #73cef8;
+}
+/* .nav-link{
     color: black;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-}
-/* .nav-link:hover{
-    color: white;
-    background-color: black;
 } */
 .navbar-brand{
     font-size: 1.25rem;
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
-    /* padding-right: 42rem; */
+}
+.navbar-nav {
+    padding: 0 81.5px;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.navbar-nav li a {
+    color: black;
+    font-weight: 600;
 }
 /* end nav */
 
 /* start dark mode */
 .ui-switch {
+    padding-top: 10px;
     /* switch */
     --switch-bg: rgb(135, 150, 165);
     --switch-width: 48px;
@@ -111,132 +141,145 @@ nav{
 /* end dark mode */
 
 /* start content */
-.contain{
-    /* margin-top: 0%; */
+.landing-page{
     display: flex;
-    position: relative;
 }
-.contain .info{
-    width: 480px;
+.landing-page .content{
+    padding-top: 10%;
+    /* width: 480px;
     height: 408px;
     padding-top: 150px;
     margin-left: 155px;
     margin-right: 13rem;
     gap: 12px;
-    margin-top: 5rem;
+    margin-top: 5rem; */
 }
-.contain .img{
-    position: absolute;
+.landing-page .content h5{
+    font-size: 20px;
+    font-weight: 600;
 }
-.contain .im2{
-    position: absolute;
+.landing-page .content p{
+    color: #828282;
+    font-size: 24px;
+}
+.landing-page .content h1 {
+    font-size: 64px;
+    margin: 20px 0;
+}
+.landing-page .content button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.landing-page .content button:last-of-type {
+    border: #25282B;
+}
+.landing-page .image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 /* end content */
 
 /* start cards */
 .project{
-    width: 872px;
-    height: 900px;
-    margin-top: 253px;
-    margin-left: 422px;
-    margin-right: 422px;
-    gap: 80px;
+    margin-top: 10%;
 }
-.project h3{
-    text-align: center;
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.project-card .content {
+    padding: 20px;
+}
+.project-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
     font-family: "Playfair", serif;
-    font-size: 48px;
-    padding-bottom: 70px;
-    text-decoration: underline;
-    text-decoration-color: #FDC435;
 }
-.project .card{
-    width: 800px;
-    height: 312px;
+.project-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
 }
-.project .card img{
-    /* width: 920px; */
-    height: 310px;
+.project-card .btn {
+    border-radius: 25px;
 }
 /* end cards */
 
 /* start contact us */
-.contact{
+/* .contact{
     width: 400px;
     height: 603px;
     margin-left: 600px;
     gap: 56px;
+} */
+.contact-form {
+    max-width: 400px;
+    height: 603px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.contact h3{
-    text-align: center;
-    font-family: "Playfair", serif;
-    font-size: 48px;
-    padding-bottom: 70px;
-    text-decoration: underline;
-    text-decoration-color: #FDC435;
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
-.contact .butcon{
-    justify-items: end;
+.icons a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000000;
+}
+.icons a img{
+    width: 30px;
+    height: 30px;
 }
 /* end contact us */
 
 /* start footer */
-footer{
-    width: 1440px;
-    height: 344px;
-    margin-left: 100px;
-}
-footer .fotcon{
-    justify-items: center;
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6c757d;
 }
 /* end footer */
 
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
+/* responsive for mobile screen  */
+@media (max-width: 767px) {
+    .landing-page .content h1 {
+        font-size: 2rem;
+        text-align: center;
     }
-    .navbar-nav .nav-link {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-    .port h2 {
-        font-size: 1.8rem;
-    }
-    .port p {
-        font-size: 1rem;
-    }
-    .project .card-title {
-        font-size: 1.5rem;
-    }
-    .contact h3 {
-        font-size: 1.5rem;
-    }
-}
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 1rem;
+    .landing-page .content h5 {
+        text-align: center;
     }
-    .navbar-nav .nav-link {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+
+    .landing-page .content p {
+        text-align: center;
     }
-    .port h2 {
-        font-size: 1.5rem;
+
+    .landing-page .content button {
+        display: block;
+        margin: 10px auto;
     }
-    .port p {
-        font-size: 0.9rem;
-    }
-    .btn {
-        font-size: 0.8rem;
-    }
-    .contact h3 {
-        font-size: 1.2rem;
-    }
-    .contact .form-label {
-        font-size: 0.9rem;
-    }
-    .contact .form-control {
-        font-size: 0.8rem;
+
+    .landing-page .image img {
+        margin-top: 20px;
     }
 }

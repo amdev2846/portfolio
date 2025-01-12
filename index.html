@@ -13,94 +13,114 @@
     </head>
     <body>
         <!-- start navbar -->
-        <section class="port">
-            <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
-                <div class="container">
-                  <a class="navbar-brand font-weight-bold" href="#">Amal Mohammad</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                      <a class="nav-link active px-lg-4 rounded" href="#">About</a>
-                      <a class="nav-link px-lg-4 rounded" href="#">Projects</a>
-                      <a class="nav-link px-lg-4 rounded" href="#">Contact</a>
+        <section class="nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg text-uppercase navbar-light">
+                    <a class="navbar-brand font-weight-bold" href="#">Amal Mohammad</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- start dark mode -->
+                                <label class="ui-switch">
+                                    <input type="checkbox" />
+                                    <div class="slider">
+                                        <div class="circle"></div>
+                                    </div>
+                                </label>
+                                <script>
+                                    const switchInput = document.querySelector(".ui-switch input");
+                        
+                                    switchInput.addEventListener("change", () => {
+                                    document.body.style.backgroundColor = switchInput.checked
+                                        ? "black"
+                                        : "";
+                                    document.body.style.color = switchInput.checked
+                                        ? "white"
+                                        : "";
+                                    });
+                                </script>
+                                <!-- end dark mode -->
+                            </li>
+                        </ul>
                     </div>
-                    <!-- start dark mode -->
-                    <label class="ui-switch">
-                        <input type="checkbox" />
-                        <div class="slider">
-                            <div class="circle"></div>
-                        </div>
-                    </label>
-                    <script>
-                        const switchInput = document.querySelector(".ui-switch input");
-              
-                        switchInput.addEventListener("change", () => {
-                        document.body.style.backgroundColor = switchInput.checked
-                            ? "black"
-                            : "";
-                        document.body.style.color = switchInput.checked
-                            ? "white"
-                            : "";
-                        });
-                    </script>
-                    <!-- end dark mode -->
-                  </div>
-                </div>
-            </nav>
-            <!-- end navbar -->
+                </nav>
+            </div>
+        </section>
+        <!-- end navbar -->
     
-            <!-- start content -->
-            <div class="contain">
-                <div class="info">
-                    <h5 class="text-warning">UI/UX DESIGNER</h5>
-                    <h2>Hello,  my name is Amal Mohammad</h2>
-                    <p>Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
-                    <button type="button" class="btn btn-warning">Projects</button>
-                    <button type="button" class="btn btn-outline-dark">LinkedIn</button>
-                </div>
-                <div class="img-cont">
-                    <div class="img">
-                        <img src="assets/img/image2.svg">
+        <!-- start content -->
+        <section class="landing-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="content">
+                            <h5 class="text-info">Frontend Developer</h5>
+                            <h1>Hello,  my name is Amal Mohammad</h1>
+                            <p>I am Amal Mohammad, an IT graduate with 3.83 GPA. I have studied at Lebanese International University.
+                                I specialize in Frontend development, also I am interested in improving my skills that will help me in my career.
+                                However, I can use lots of programming languages in my works like HTML, CSS, Java Script, Bootstrap and so on...
+                            </p>
+                            <button type="button" class="btn btn-info">Projects</button>
+                            <button type="button">LinkedIn</button>
+                        </div>
                     </div>
-                    <div class="im2">
-                        <img src="assets/img/image.svg"> 
+                    <div class="col-md-6 col-sm-12">
+                        <div class="image">
+                            <img src="assets/img/img2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- end content -->
         </section>
+        <!-- end content -->
 
         <!-- start cards -->
         <section class="project">
-            <h3>Projects</h3>
-            <div class="card mb-4">
-                <div class="row g-0">
-                  <div class="col-md-7">
-                    <img src="assets/img/mediamodifier_image.png" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-5">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-family: Playfair, serif; font-size: 40px;">Movie Theater</h5>
-                      <p class="card-text">I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.</p>
-                      <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true" style="border-radius: 24px;">View Project</button>
+            <div class="title text-center mb-lg-5">Projects</div>
+            <div class="container my-5">
+                <!-- card one -->
+                <div class="row align-items-center project-card">
+                    <div class="col-md-6 col-12">
+                        <div class="content">
+                            <h2 style="font-family: Playfair, serif;">Movie Theater</h2>
+                            <p>I created this project using HTML, CSS programming languages so I can apply a Figma design,
+                                and I completed the project successfully.</p>
+                            <button type="button" class="btn btn-outline-dark" style="border-radius: 24px;">View Project</button>
+                        </div>
                     </div>
-                  </div>
+                    <div class="col-md-6 col-12">
+                        <img src="assets/img/mediamodifier_image.png" class="img-fluid rounded-end" alt="Project Image">
+                    </div>
                 </div>
-            </div>
-            <div class="card mb-4">
-                <div class="row g-0">
-                  <div class="col-md-7">
-                    <img src="assets/img/acc.png" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-5">
-                    <div class="card-body">
-                      <h5 class="card-title" style="font-family: Playfair, serif; font-size: 40px;">Accessories Store</h5>
-                      <p class="card-text">You can also add in this description the type of the project, if it was for web, mobile, electron.</p>
-                      <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true" style="border-radius: 24px;">View Project</button>
+
+                <!-- card two -->
+                <div class="row align-items-center project-card">
+                    <div class="col-md-6 col-12">
+                        <img src="assets/img/acc.png" class="img-fluid rounded-start" alt="Project Image">
                     </div>
-                  </div>
+                    <div class="col-md-6 col-12">
+                        <div class="content">
+                            <h2 style="font-family: Playfair, serif;">Accessories Store</h2>
+                            <p>I created this project using HTML, CSS, and Bootstrap programming languages so I can apply a Figma design,
+                                and I completed the project successfully.</p>
+                            <button type="button" class="btn btn-outline-dark" style="border-radius: 24px;">View Project</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,43 +128,47 @@
 
         <!-- start contact us -->
         <section class="contact">
-            <h3>Contact Us</h3>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
+            <div class="title text-center mb-lg-5">Contact Us</div>
+            <div class="container">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-info">Send</button>
+                    </div>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1">
+
+            <!-- social-icons -->
+            <div class="icons">
+                <a href="#" aria-label="Instagram"><img src="assets/img/instagram-logo.svg" alt="" srcset=""></a>
+                <a href="#" aria-label="LinkedIn"><img src="assets/img/linkedin.svg" alt="" srcset=""></a>
+                <a href="#" aria-label="Email"><img src="assets/img/letter.svg" alt="" srcset=""></a>
             </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="butcon">
-                <div class="butt">
-                    <button type="button" class="btn btn-warning">Send</button>
-                </div>
+
+            <!-- start footer -->
+            <div class="footer">
+                <p>&copy; 2024 Amal Mohammad. All rights reserved.</p>
+                <!-- <div>
+                    <img src="assets/img/footer.svg">
+                </div> -->
             </div>
         </section>
         <!-- end contact us -->
-        
-        <!-- start footer -->
-        <footer>
-            <div class="fotcon">
-                <div class="fotimg">
-                    <img src="assets/img/instagram-logo.svg">
-                    <img src="assets/img/linkedin.svg">
-                    <img src="assets/img/letter.svg">
-                </div>
-                <p>&copy; 2024 Amal Mohammad. All rights reserved.</p>
-            </div>
-            <div>
-                <img src="assets/img/footer.svg">
-            </div>
-        </footer>
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     </body>
 </html>
